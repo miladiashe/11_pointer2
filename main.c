@@ -1,21 +1,21 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+char *proverb = "all that glitters is not gold.";
+
+
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+void setpointer(char*q)
+{
+	*q = proverb;
+}
 
 int main(int argc, char *argv[]) {
 	
-	int i = 100;
-	int *p = &i;
-	int **q = &p;
-	
-	*p = 200;
-	
-	printf("i = %d, *p = %d, **q = %d\n", i, *p, **q);
-	
-	**q = 300;
-	
-	printf("i = %d, *p = %d, **q = %d", i, *p, **q);
+	char **p = "zzz";
+	setpointer(&p);
+	printf("%s", p);
 	
 	return 0;
 }
